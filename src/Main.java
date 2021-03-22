@@ -159,7 +159,7 @@ public class Main {
                 //находим коэф k
                 String sub = str.substring(prevCl, opening);
                 String subK = ""; //ненужное? нач зн
-                for (int l = sub.length() - 1; l >= 0; l--) {     //надо идти с конца
+                for (int l = sub.length() - 1; l >= 0; l--) {
                     char c = sub.charAt(l);
                     if ((c >= 48) && (c <= 57)) {
                         subK = c + subK;
@@ -170,7 +170,7 @@ public class Main {
                 int k = Integer.parseInt(subK);
 
                 //находим предподсроку frontSubS
-                String frontSubS = ""; //ненужное нач зн
+                String frontSubS = "";
                 if (prevCl == 0) {
                     sub = str.substring(prevCl, opening);
                     for (char c : sub.toCharArray()) {
@@ -184,7 +184,7 @@ public class Main {
 
                 //находим постподсроку postSubS
                 sub = str.substring(closing + 1);
-                String postSubS = ""; //ненужное нач зн
+                String postSubS = "";
                 for (char c : sub.toCharArray()) {
                     if (((c >= 65) && (c <= 90)) || ((c >= 97) && (c <= 122))) {
                         postSubS += c;
